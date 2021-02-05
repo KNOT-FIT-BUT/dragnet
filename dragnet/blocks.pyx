@@ -495,7 +495,7 @@ cdef class PartialBlock:
 
         cdef vector[string] anchor_text_list
 
-        anchor_text_list = _text_from_subtree(ele, False, self._tag_fe, self)
+        anchor_text_list = [b"__VERT__LINK__"] #  _text_from_subtree(ele, False, self._tag_fe, self)
 
         cdef size_t k
         for k in range(anchor_text_list.size()):
